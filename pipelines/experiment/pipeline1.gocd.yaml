@@ -4,7 +4,7 @@ pipelines:
     group: experiment 
     materials:
       mygit:
-        git: https://github.com/raghav1674/gocd-learn.git
+        git: https://github.com/raghav1674/gocd-learn
         branch: master
         destination: experiment 
     stages:
