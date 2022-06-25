@@ -1,8 +1,4 @@
 format_version: 10
-environments: 
-  learn: 
-    pipelines:
-    - learn-simple-pipeline
 pipelines:
   learn-simple-pipeline:
     group: learn

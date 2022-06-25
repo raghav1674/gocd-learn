@@ -1,0 +1,23 @@
+format_version: 10
+pipelines:
+  dependent-simple-pipeline:
+    group: learn
+    materials:
+      simple-pipeline-material:
+        pipeline: learn-simple-pipeline
+        stage: simple_stage
+    stages:
+    - show_files:
+        jobs:
+          show_job:
+            tasks:
+            - exec:
+                command: /bin/bash
+                arguments:
+                - -c 
+                - pwd
+            - exec:
+                command: /bin/bash
+                arguments:
+                - -c 
+                - ls -alh 

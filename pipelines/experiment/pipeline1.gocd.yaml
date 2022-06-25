@@ -1,0 +1,26 @@
+format_version: 10
+pipelines:
+  pipeline_1:
+    group: experiment 
+    materials:
+      mygit:
+        git: https://github.com/raghav1674/gocd-learn.git
+        branch: master
+        destination: experiment 
+    stages:
+    - first_stage:
+        jobs:
+          first_job:
+            artifacts:
+            - build:
+                source: experiment/metadata
+                destination: ""
+            tasks:
+            - exec:
+                command:  /bin/bash
+                arguments:
+                - -c 
+                - echo '1' > metadata
+                working_directory: experiment
+          
+              
