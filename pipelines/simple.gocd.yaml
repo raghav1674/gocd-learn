@@ -1,0 +1,23 @@
+format_version: 10
+environments: 
+  learn: 
+    pipelines:
+    - learn-simple-pipeline
+pipelines:
+  learn-simple-pipeline:
+    group: learn
+    materials:
+      learn-material:
+        git: https://github.com/raghav1674/gocd-learn.git
+        branch: master
+        destination: learn
+    stages:
+    - simple_stage:
+        jobs:
+          exec_job:
+            tasks:
+              - exec:
+                  command: /bin/bash
+                  arguments:
+                    - -c 
+                    - echo 'Hello World'
